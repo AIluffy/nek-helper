@@ -1,0 +1,309 @@
+{
+    /*
+    ** 布局
+    */
+    "card": {
+        "prefix": "k-card",
+        "body": [
+            "<kl-card title=\"$1\">",
+            "\t$0",
+            "</kl-card>"
+        ],
+        "description": "卡片"
+    },
+    "row": {
+        "prefix": "k-row",
+        "body": [
+            "<kl-row>",
+            "\t<kl-col span=$1>",
+            "\t\t<div class=\"u-gridContent\">$0</div>",
+            "\t</kl-col>",
+            "</kl-row>"
+        ],
+        "description": "栅格布局"
+    },
+    "search": {
+        "prefix": "k-search",
+        "body": [
+            "<kl-search on-search={$1} on-reset={$2}>",
+            "\t<kl-row>",
+            "\t\t<kl-col span=4>",
+            "\t\t\t<kl-form-item labelSize=60 title=\"$3\">",
+            "\t\t\t\t<kl-input type=\"text\"></kl-input>",
+            "\t\t\t</kl-form-item>",
+            "\t\t</kl-col>",
+            "\t</kl-row>",
+            "\t<kl-search-more>",
+            "\t\t<kl-row>",
+            "\t\t\t<kl-col span=4>",
+            "\t\t\t\t<kl-form-item labelSize=60 title=\"$4\">",
+            "\t\t\t\t\t<kl-input type=\"text\"></kl-input>",
+            "\t\t\t\t</kl-form-item>",
+            "\t\t\t</kl-col>",
+            "\t\t</kl-row>",
+            "\t</kl-search-more>",
+            "</kl-search>",
+            "$0"
+        ],
+        "description": "商品筛选区"
+    },
+    "table": {
+        "prefix": "k-table",
+        "body": [
+            "<kl-table source={${1:source}>",
+            "\t$0",
+            "</kl-table>"
+        ],
+        "description": "表格"
+    },
+    "table-col": {
+        "prefix": "k-table-col",
+        "body": [
+            "<kl-table-col name=\"$1\" key=\"$2\" />$0"
+        ]
+    },
+    // /*
+    // ** 表单
+    // */
+    "button": {
+        "prefix": "k-button",
+        "body": [
+            "<kl-button type=\"${1:primary}\" title=\"$2\" />$0"
+        ],
+        "description": "按钮"
+    },
+    "check": {
+        "prefix": "k-check",
+        "body": [
+            "<kl-check name=\"$1\" checked={${2:isChecked}} />$0"
+        ],
+        "description": "普通复选框"
+    },
+    "checkGroup": {
+        "prefix": "k-check-group",
+        "body": [
+            "<kl-check-group source={${1:source}} value={${2:checkedValue}} />$0"
+        ],
+        "description": "复选组"
+    },
+    "DatePicker": {
+        "prefix": "k-date-picker",
+        "body": [
+            "<kl-date-picker date={${1:selectDate}} placeholder=\"选择日期\" />$0"
+        ],
+        "description": "日期选择器"
+    },
+    "Form": {
+        "prefix": "k-form",
+        "body": [
+            "<kl-form labelSize=\"80px\">",
+            "\t$0",
+            "</kl-form>"            
+        ],
+        "description": "表单"
+    },
+    "FormItem": {
+        "prefix": "k-form-item",
+        "body": [
+            "<kl-form-item title=\"$1\">",
+            "\t$0",
+            "</kl-form-item>"
+        ],
+        "description": "表单项"
+    },
+    "Input": {
+        "prefix": "k-input",
+        "body": [
+            "<kl-input placeholder=\"$1\" autofocus />$0"
+        ],
+        "description": "input"
+    },
+    "MultiSelect": {
+        "prefix": "k-multi-select",
+        "body": [
+            "<kl-multi-select source={${1:source} value={${2:value}} />$0"
+        ],
+        "description": "多级选择"
+    },
+    "RadioGroup": {
+        "prefix": "k-radio-group",
+        "body": [
+            "<kl-radio-group source={${1:source}} value={${2:value}} />$0"
+        ],
+        "description": "单选组"
+    },
+    "select": {
+        "prefix": "k-select",
+        "body": [
+            "<kl-select source={${1:source}} />$0"
+        ],
+        "description": "下拉选择"
+    },
+    "text": {
+        "prefix": "k-text",
+        "body": [
+            "<kl-text size=\"${1:xs}\" text=\"$2\"></kl-text>$0"
+        ],
+        "description": "文本展示"
+    },
+    "TextArea": {
+        "prefix": "k-text-area",
+        "body": [
+            "<kl-textarea  placeholder=\"请输入备注\" />$0"
+        ],
+        "description": "文本输入"
+    },
+    "treeview": {
+        "prefix": "k-tree-view",
+        "body": [
+            "<kl-tree-view source={${1:source}} value={${2:value}}/>$0"
+        ],
+        "description": "树型视图"
+    },
+    "upload": {
+        "prefix": "k-upload",
+        "body": [
+            "<kl-upload action='https://nos.kaolafed.com/upload' file-list={${1:list}}></kl-upload>$0"
+        ],
+        "description": "上传文件"
+    },
+    // /*
+    // ** 通知
+    // */
+    "message": {
+        "prefix": "k-message",
+        "body": [
+            "<kl-message type=\"${1:success}\" class=\"${2:f-mb10}\">",
+            "\t$0",
+            "</kl-message>"
+        ],
+        "description": "消息"
+    },
+    "popconfirm": {
+        "prefix": "k-pop-confirm",
+        "body": [
+            "<kl-pop-confirm content=\"$1\">",
+            "\t<kl-button  type=\"${2:tertiary}\" title=\"$3\"></kl-button>",
+            "</kl-pop-confirm>$0"
+        ],
+        "description": "确认提示"
+    },
+    // /*
+    // ** 导航
+    // */
+    "breadcrumb": {
+        "prefix": "k-crumb",
+        "body": [
+            "<kl-crumb separator=\"/\">",
+            "\t<kl-crumb-item href=\"/\"><kl-icon type=\"home2\" color=\"#E31436\" /></kl-crumb-item>",
+            "\t<kl-crumb-item  href=\"$1\" content=\"$2\" />$0",
+            "</kl-crumb>"
+        ],
+        "description": "面包屑"
+    },
+    "breadcrumb-item": {
+        "prefix": "k-crumb-item",
+        "body": [
+            "<kl-crumb-item  href=\"$1\" content=\"$2\" />$0"
+        ]
+    },
+    "menu": {
+        "prefix": "k-menu",
+        "body": [
+            "<kl-row>",
+            "\t<kl-col span=4>",
+            "\t\t<div style=\"width:180px;\">",
+            "\t\t\t<kl-menu>",
+            "\t\t\t{#list ${1:menus} as menu}",
+            "\t\t\t\t{#if menu.children && menu.children.length}",
+            "\t\t\t\t<kl-menu-sub title=\"{menu.title}\" defaultOpen=\"{menu.open}\">",
+            "\t\t\t\t\t{#list menu.children as page}",
+            "\t\t\t\t\t<kl-menu-item isCurrent=\"{page.open}\" url=\"{page.url}\">{page.title}</kl-menu-item>",
+            "\t\t\t\t\t{/list}",
+            "\t\t\t\t</kl-menu-sub>",
+            "\t\t\t\t{#else}",
+            "\t\t\t\t<kl-menu-sub titleTemplate=\"<a href='{menu.url}'>{menu.title}</a>\"></kl-menu-sub>",
+            "\t\t\t\t{/if}",
+            "\t\t\t{/list}",
+            "\t\t</kl-menu>",
+            "\t\t</div>",
+            "\t</kl-col>",
+            "</kl-row>$0"
+        ],
+        "description": "导航菜单栏"
+    },
+    "pager": {
+        "prefix": "k-pager",
+        "body": [
+            "<kl-pager current={${1:current}} sumTotal={${2:sumTotal}} pageSize={${3:pageSize}} />$0"
+        ],
+        "description": "分页"
+    },
+    "sidebar": {
+        "prefix": "k-sidebar",
+        "body": [
+            "<kl-sidebar menus={${1:menus}} bodyEl=\"${2:j-body}\" />$0"
+        ],
+        "description": "菜单栏"
+    },
+    "step": {
+        "prefix": "k-step",
+        "body": [
+            "<kl-steps current={${1:current}} steps={${2:steps}} />$0"
+        ],
+        "description": "步骤条"
+    },
+    "tab": {
+        "prefix": "k-tab",
+        "body": [
+            "<kl-tabs>",
+            "\t$0",
+            "</kl-tabs>"
+        ],
+        "description": "选项卡"
+    },
+    "tab-item": {
+        "prefix": "k-tab-item",
+        "body": [
+            "<kl-tab title=\"$1\">$2</kl-tab>$0"
+        ],
+        "description": "选项卡元素"
+    },
+    "badge": {
+        "prefix": "k-badge",
+        "body": [
+            "<kl-badge text=\"${1:default}\" type=\"${2:default}\" circle=${3:true} />$0"
+        ],
+        "description": "徽标"
+    },
+    "icon": {
+        "prefix": "k-icon",
+        "body": [
+            "<kl-icon type=\"$1\" color=\"$2\" fontSize=\"$3\" />$0"
+        ],
+        "description": "图标"
+    },
+    "loading": {
+        "prefix": "k-loading",
+        "body": [
+            "<kl-loading visible={${1:visible}} />$0"
+        ],
+        "description": "加载"
+    },
+    "progress": {
+        "prefix": "k-progress",
+        "body": [
+            "<kl-progress class=\"f-mb10\" percent=${1:25} />$0"
+        ],
+        "description": "进度条"
+    },
+    "tooltip": {
+        "prefix": "k-tooltip",
+        "body": [
+            "<kl-tooltip tip=\"$1\">",
+            "    <kl-button title=\"${2:鼠标放上去,可以看到提示}\" />",
+            "</kl-tooltip>$0"
+        ],
+        "description": "文本提示"
+    }
+}

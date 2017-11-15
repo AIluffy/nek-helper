@@ -1,0 +1,93 @@
+{
+    "component": {
+        "prefix": "n-component",
+        "body": [
+            "var ${1:component} = new NEKUI.Component({",
+            "\ttemplate:template,",
+            "\tdata: {",
+            "\t\t$2",
+            "\t}$0",
+            "});"
+        ],
+        "description": "nek通用组件"
+    },
+    "Modal-component": {
+        "prefix": "n-modal",
+        "body": [
+            "var modal = new NEKUI.KLModal({",
+            "\tdata: {",
+            "\t\ttitle: '$1',",
+            "\t\tcontentTemplate: '$2'",
+            "\t}",
+            "});$0"
+        ],
+        "description": "Modal组件"
+    },
+    "Notify-component": {
+        "prefix": "n-notify",
+        "body": [
+            "NEKUI.KLNotify.${1:warning}('$2');$0"
+        ],
+        "description": "通知组件"
+    },
+    "ImgPrevies-component": {
+        "prefix": "n-imgPreview",
+        "body": [
+            "new NEKUI.KLImagePreview({",
+            "\tdata: {",
+            "\t\timageList: [{",
+            "\t\t\tname: '$1',",
+            "\t\t\tsrc: '$2'",
+            "\t\t}],",
+            "\t\tcurIndex: ${3:0}",
+            "\t}",
+            "})"
+        ],
+        "description": "图片预览组件"
+    },
+    "Pager-data": {
+        "prefix": "n-pager-data",
+        "body": [
+            "current: ${1:1},",
+            "pageSize: ${2:10},",
+            "sumTotal: ${3:100},$0"
+        ],
+        "description": "分页数据"
+    },
+    "Menu-data": {
+        "prefix": "n-menu-data",
+        "body": [
+            "menus: [",
+            "\t{",
+            "\t\ttitle: '${1:首页}',",
+            "\t\tkey: '${2:home}'",
+            "\t},",
+            "\t{",
+            "\t\ttitle: '$3',",
+            "\t\topen: true,",
+            "\t\tkey: '$4',",
+            "\t\tchildren: [",
+            "\t\t\t{",
+            "\t\t\t\topen: true,",
+            "\t\t\t\ttitle: '$5',",
+            "\t\t\t\turl: '${6:/}'",
+            "\t\t\t}",
+            "\t\t]",
+            "\t}",
+            "];$0"
+        ],
+        "description": "menu数据"
+    },
+    "Step-data": {
+        "prefix": "n-step-data",
+        "body": [
+            "current: 0,",
+            "steps: [{",
+            "\tstatus: 0,",
+            "\ttitle: '$1',",
+            "\tdescription: '$2'",
+            "}]$0"
+        ],
+        "description": "step数据"
+    }
+}

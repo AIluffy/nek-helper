@@ -1,0 +1,26 @@
+{
+    "name": "nek-helper",
+    "displayName": "nek-helper",
+    "description": "",
+    "version": "1.0.1",
+    "publisher": "ailuffy",
+    "icon": "images/logo.jpg",
+    "engines": {
+        "vscode": "^1.15.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "html",
+                "path": "./snippets/html.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/javascript.json"
+            }
+        ]
+    }
+}
